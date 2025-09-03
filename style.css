@@ -1,0 +1,82 @@
+body{
+    font-family: 'karla';
+    font-size: 16px;
+    margin:2rem;
+    background-color: rgb(190, 201, 211);
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    'box1 box1'
+    'box2 box3'
+    ;
+    margin: auto;
+    max-width: 700px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+}
+.box{
+
+    color: hsl(204, 43%, 93%);
+    padding: 2rem 4rem;
+}
+
+.charge{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.box1{
+    grid-area: box1;
+    background:white;
+}
+.box1 h1{
+    color: hsl(179, 62%, 43%);
+}
+.box1 h2{
+    color: hsl(71, 73%, 54%);
+}
+.box1 p{
+    color: hsl(218, 22%, 67%);
+}
+.box2{
+    grid-area: box2;
+    background-color: hsl(179, 62%, 43%);
+    /* min-height: 220px; */
+}
+.box3{
+    grid-area: box3;
+    background-color: hsl(179, 63%, 51%);
+}
+#price{
+    font-size: 2rem;
+    font-weight: 700;
+}
+#duration{
+    color: hsl(216, 39%, 78%);
+}
+button{
+    width: 100%;
+    padding: 0.7rem 2rem;
+    border-radius: 0.5rem;
+    color:white ;
+    border: none;
+    box-shadow: 1px 1px 25px 1px rgb(78, 75, 75);
+    background-color:hsl(71, 73%, 54%); ;
+}
+@media (width < 700px){
+    .container{
+        grid-template-areas: 
+        'box1'
+        'box2'
+        'box3'
+        ;
+        max-width: 450px;
+    }
+    .box{
+
+        padding: 2rem;
+    }
+}
